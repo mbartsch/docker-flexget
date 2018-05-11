@@ -8,6 +8,6 @@
 #
 
 s6-setuidgid abc /usr/bin/flexget \
-    -c /config/config.yml \
+    -c "${FLEXGET_CONFIG_FILE:-/config/config.yml}" \
     --loglevel "${FLEXGET_LOG_LEVEL:-debug}" \
     daemon start --autoreload-config
