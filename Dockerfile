@@ -1,4 +1,3 @@
-#FROM lsiobase/python:3.8
 FROM python
 
 # Set python to use utf-8 rather than ascii.
