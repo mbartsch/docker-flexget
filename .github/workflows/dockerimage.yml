@@ -15,8 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: ilteoood/docker_buildx@master
       with:
-        name: mbartsch/flexget
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        publish: true
+        imageName: bartsch/flexget
+        dockerHubUser: ${{ secrets.DOCKER_USERNAME }}
+        dockerHubPassword: ${{ secrets.DOCKER_PASSWORD }}
